@@ -1,0 +1,12 @@
+[project]
+name = "words-generator"
+version = "0.1.0"
+description = "Generates random words for various naming purposes"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "wordfreq>=3.1.1",
+]
+
+[project.scripts]
+words = "words_generator:main"
