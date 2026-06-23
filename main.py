@@ -1,6 +1,7 @@
 import secrets
 import sys
 
+import pyperclip
 from wordfreq import top_n_list
 
 
@@ -16,7 +17,11 @@ def main():
     words = []
     for _ in range(length):
         words.append(secrets.choice(filtered))
-    print(*words, sep="-")
+
+    output = '-'.join(words)
+
+    print(output)
+    pyperclip.copy(output)
 
 
 if __name__ == "__main__":
